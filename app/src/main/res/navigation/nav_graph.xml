@@ -3,7 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/cardsListFragment">
+    app:startDestination="@id/veryHomeFragment">
+
+    <fragment
+        android:id="@+id/veryHomeFragment"
+        android:name="com.example.tarot_01_gamma.data.ui.veryHomeFragment.VeryHomeFragment"
+        android:label="fragment_very_home"
+        tools:layout="@layout/fragment_very_home">
+        <action
+            android:id="@+id/action_veryHomeFragment_to_cardsListFragment"
+            app:destination="@id/cardsListFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/cardsListFragment"
@@ -37,6 +47,8 @@
             android:defaultValue=""
             app:argType="string" />
     </fragment>
+
+
 
 
 </navigation>
